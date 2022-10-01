@@ -1,0 +1,326 @@
+<!--
+5 flexible elements: scrollspy, modal, alerts, badges, spinners
+2 extra elements: tooltip, popovers
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Jokes</title>
+    <link rel="icon" href="images/tearsofjoy.webp">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    body {
+        position: relative;
+    }
+    </style>
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+    <header class="container-fluid text-center" style="background-image: url(images/enjoyingajoke.jpg); background-size: cover; background-repeat: no-repeat; font-size:20.4vh" id="Home">
+      <br>
+      <span class="text-success border border-5 border-success rounded-5" style="font-size:15vh; font-family: Brush Script MT" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="a comprehensive guide to analyzing, creating, framing, and telling jokes" title="by Logan Wang">&nbsp&nbspJokes&nbsp&nbsp</span>
+      <br>
+      <br>
+    </header>
+
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">
+          <img src="images/tearsofjoy.webp" alt="😂" style="width:5vh;" class="rounded-pill">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#Home" data-bs-toggle="tooltip" title="go back to top">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#History" data-bs-toggle="tooltip" title="learn a bit more about jokes in history">History of Jokes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Components" data-bs-toggle="tooltip" title="how exactly does one tell a joke?">Components of a Joke</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Puns" data-bs-toggle="tooltip" title="good old-fashioned wordplay">Puns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#One-liners" data-bs-toggle="tooltip" title="hilarious quotes and quips">One-liners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Anti-jokes" data-bs-toggle="tooltip" title="funny cause it's not funny">Anti-jokes</a>
+            </li>
+            <li class="nav-item dropdown dropend">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Further Resources <span class="badge bg-danger">3</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="http://www.jimpoz.com/jokes/" target="_blank">Jim's Joke Repository <span class="badge bg-secondary">New</span></a></li>
+                <li><a class="dropdown-item" href="https://pun.me/random/" target="_blank">PunME Random Generator <span class="badge bg-secondary">New</span></a></li>
+                <li><a class="dropdown-item" href="https://www.funny-jokes.com/" target="_blank">More Funny Jokes <span class="badge bg-secondary">New</span></a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search joke repository...">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#search">
+              <span class="spinner-border spinner-border-sm text-light"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="modal fade" id="search">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Notice</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            Search joke repository functionality is not yet available. However, Laugh Factory has a great search engine you can check out <a href="http://www.laughfactory.com/jokes/popular-jokes" target="_blank">here</a>.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center my-20 p-5 bg-primary text-white">
+      <h1>"Laughter is the shortest distance between two people."</h1>
+      <br>
+      <h5>— <abbr title="Danish-American comedian, lived 1909-2000">Victor Borge</abbr></h5>
+    </div>
+
+    <div id="History" class="container-fluid my-20 p-5 bg-dark text-white">
+      <br>
+      <br>
+      <h2>The History of Jokes</h2>
+      <br>
+      <div class="row">
+        <div class="col-lg-1"><strong>2600 BCE</strong></div>
+        <div class="col-md-5"><p>King Snefru of Egypt's court magician Djadjamankh gives him a papyrus, which according to the British Museum, contains the first written joke.</p></div>
+        <div class="col-md-6"><p>"How do you entertain a bored pharaoh? You sail a boatload of young women dressed only in fishing nets down the Nile and urge the pharaoh to go catch a fish."</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>350 BCE</strong></div>
+        <div class="col-md-5"><p>The original Friar’s Club – the "Group of Sixty" – meet regularly in the Temple of Heracles in Athens to tell jokes.</p></div>
+        <div class="col-md-6"><p>Alas, none have been passed down.</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>4th or 5th Century BCE</strong></div>
+        <div class="col-md-5"><p>A Greek anthology of more than 200 jokes called The Philolegos is written. The Greeks loved jokes about "scholastikos," or eggheads.</p></div>
+        <div class="col-md-6"><p>"An egghead was on a sea voyage when a big storm blew up, causing his slaves to weep in terror. 'Don’t cry,' he consoled them, 'I have freed you all in my will.'"</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>1451</strong></div>
+        <div class="col-md-5"><p>Papal secretary Poggio Bracciolini collects 273 Latin jokes (and puns) in "Liber Facetiarum."</p></div>
+        <div class="col-md-6"><p>"A friar preaches against adultery says, 'It is such an abominable sin that I would rather sleep with ten virgins than a single married woman.' Replies Poggio: 'Many who heard him felt the same way.'"</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>1603</strong></div>
+        <div class="col-md-5"><p>Shakespeare introduces the knock-knock joke in his play Macbeth.</p></div>
+        <div class="col-md-6"><p>"Knock, knock, knock! / Who’s there, in the name of Beelzebub? / Here’s a farmer that hanged himself on the expectation of plenty / Come in time, have napkins enough about you; here you’ll sweat for 't."</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>1739</strong></div>
+        <div class="col-md-5"><p>"Joe Miller’s Jests," an English anthology of jokes, is a hit.</p></div>
+        <div class="col-md-6"><p>"A famous teacher of Arithmetick, who had long been married without being able to get his wife with child: One said to her, 'Madam, your husband is an excellent Arithmetician.' 'Yes,' replies she, 'only he can’t multiply.'"</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>1845</strong></div>
+        <div class="col-md-5"><p>Edward Lear's "Book of Nonsense" popularizes the limerick.</p></div>
+        <div class="col-md-6"><p>"There was a Young Lady whose chin / Resembled the point of a pin / So she had it made sharp / And purchased a harp / And played several tunes with her chin." Ladies from Nantucket would arrive later.</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>1847</strong></div>
+        <div class="col-md-5"><p>Monthly New York magazine Knickerbocker publishes the classic joke:</p></div>
+        <div class="col-md-6"><p>"Why did the chicken cross the road? To get to the other side."</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>1900</strong></div>
+        <div class="col-md-5"><p>The Polish joke arrives in America. It is believed that the jokes evolved from Jewish Poles, who had a tradition of telling "egghead" jokes about the rabbis of the city Chelm. As immigrants poured into America, these evolved to be about the Polish people in general.</p></div>
+        <div class="col-md-6"><p>"How do you get a one-armed Polak out of a tree? Wave."</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>1930s</strong></div>
+        <div class="col-md-5"><p>The famed comedian Henny Youngman, trying to get an usher to escort wife Sadie to her seat, says his most famous one-liner:</p></div>
+        <div class="col-md-6"><p>"Take my wife – please!"</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>1968</strong></div>
+        <div class="col-md-5"><p>Gershon Legman writes "Rationale of the Dirty Joke" chronicling blue humor, the second edition of which includes the first known version of <a href="https://www.today.com/popculture/hilarious-aristocrats-gets-joke-wbna8702838" target="_blank">The Aristocrats</a> joke.</p></div>
+        <div class="col-md-6"><p>This guy walks into a talent agent’s office and says, "I’ve got a great act. It’s a family act. My wife and little son and daughter are in it. We walk on stage and (censored), then we (censored), and then I (censored, censored) while she (really censored), and for the finale, we all (really, really censored)." The talent agent says, "That’s horrible. It’s disgusting. I’ve never heard anything like it. What do you call yourselves?" The guy proclaims, "The Aristocrats!"</p></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"><strong>2002</strong></div>
+        <div class="col-md-5"><p>An English professor hosts a contest for the world’s funniest joke. The winner, credited to comedian Spike Milligan, reads as follows:</p></div>
+        <div class="col-md-6"><p>"Two hunters are out in the woods when one of them collapses. He doesn’t seem to be breathing and his eyes are glazed. The other guy whips out his phone and calls the emergency services. He gasps, 'My friend is dead! What can I do?' The operator says, 'Calm down. I can help. First, let’s make sure he’s dead.' There is a silence, then a shot is heard. Back on the phone, the guy says, 'OK, now what?'"</p></div>
+      </div>
+      <img class="img-fluid rounded mx-auto d-block" width="1000vw" src="images/westcarpapyrus.jpg" alt="Westcar Papyrus">
+      <br>
+      <h5 class="text-center">The Westcar Papyrus contains the world's oldest recorded joke.</h5>
+    </div>
+
+    <div id="Components" class="container-fluid my-20 p-5 bg-primary text-white">
+      <br>
+      <br>
+      <h2>Components of a Joke</h2>
+      <br>
+      <div class="alert alert-info">
+        I once encountered a homeless man who asked me to spare a rupee. He said "If you give me a rupee, God will bless you with 10 thousand." I said to him "clearly, you need the 10 thousand more than I do. I’ll gladly take your money!" — Karunesh Talwar
+      </div>
+      <ol>
+        <li>
+          <strong>The Set-Up</strong>
+          <ul>
+            <li>the premise on which the joke is told</li>
+            <li>sets up the listener to anticipate something</li>
+            <li>can be an unusual fact, an incident (made up or real), or an observation</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Detail</strong>
+          <ul>
+            <li>add your details and escalate your story</li>
+            <li>should be a crisp, one-line statement</li>
+            <li>details can be fluid but must be immediately relevant</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Punchline</strong>
+          <ul>
+            <li>reverses the expectations of the set-up OR escalates it to an extreme</li>
+          </ul>
+        </li>
+      </ol>
+      <p>Here is an example of a joke by Louis CK.</p>
+      <p><span style="font-weight:bold">The Set-Up:</span> You know what’s amazing to me, you can name your kid anything you want.</p>
+      <p><span style="font-weight:bold">Detail:</span> There are NO laws (around naming a kid). There should be at least a couple of laws. None. You can literally name your kid anything. You can name your kid a name without vowels if you like — PNSNDLTN.</p>
+      <p><span style="font-weight:bold">Punchline:</span> I’d like to name my kid a whole phrase. I’ll call him Ladies and Gentlemen. This is my son, Ladies and Gentlemen.</p>
+    </div>
+
+    <div id="Puns" class="container-fluid my-20 p-5 bg-dark text-white">
+      <br>
+      <br>
+      <h2 class="header">Puns</h2>
+      <br>
+      <p>A pun, also known as paronomasia, is a form of word play that exploits multiple meanings of a term, or of similar-sounding words, for an intended humorous or rhetorical effect (Wikipedia definition). Puns have a long history in human writing. For example, the Roman playwright Plautus was famous for his puns and word games.</p>
+      <div class="alert alert-info">
+        <mark>Fun Fact:</mark> Shakespeare used over 3,000 puns in his plays. Surprisingly, Elizabethan literature considered puns and wordplay to be a "sign of literary refinement" more so than humor.
+      </div>
+      <ul>
+        <li>What do you call a mean crook going down stairs? A condescending con, descending.</li>
+        <li>I had a dream I was swimming in a pool of soda. Too bad it was just a Fanta sea.</li>
+        <li>What did the grape say when he got stepped on? Nothing, he just let out a little wine.</li>
+        <li>Why could the mathematician only work from home? Because he could only function in his domain.</li>
+        <li>Did you know that I'm really good at bowling? It's right up my alley.</li>
+        <li>What happens when a parsley farmer gets sued? They garnish his wages.</li>
+        <li>How does Moses make his coffee? Hebrews it.</li>
+        <li>How was the Roman Empire split in two? With a pair of Caesars.</li>
+        <li>Did you hear about the cheese factory that caught fire? There was nothing left but de brie.</li>
+      </ul>
+      <h4>Books Never Written</h4>
+      <p>Sometimes called "books never written" or "world's greatest books", these are jokes which consist of fictitious book titles with authors' names that contain a pun relating to the title. Perhaps the best-known example is: "Tragedy on the Cliff by Eileen Dover", which according to one source was devised by humourist Peter DeVries (1910-1993).</p>
+      <div class="alert alert-info">
+        <mark>Fun Fact:</mark> Did you know that the Tanakh (the first five books of the Bible) <a href="https://books.google.com/books?id=ThA8AAAAIAAJ&q=%22pun+forms+the+tie%22&pg=PA1#v=snippet&q=%22pun%20forms%20the%20tie%22&f=false" class="alert-link" target="_blank">contains puns</a>?
+      </div>
+      <ul>
+        <li>'To the Outhouse' by Willie Maket, illustrated by Betty Wont</li>
+        <li>'The Yellow River' by I.P. Daily</li>
+        <li>'Why Should I Walk?' by Iona Carr</li>
+        <li>'How to Serve Your Fellow Man' by The Cannibals</li>
+        <li>'Supporting Athletes' by Jacques Strappe</li>
+        <li>'Caulking Made Easy' by Phil McKrevis</li>
+        <li>'The Future of Technology' by Cy Borg, Anne Droid and Rob Ott</li>
+        <li>'Interesting Places Around The World' by Ben There & Don That</li>
+        <li>'Deep in Debt' by Owen A. Lott</li>
+        <li>'Where Have All the Animals Gone?' by Darren Dabarn</li>
+      </ul>
+    </div>
+
+    <div id="One-liners" class="container-fluid my-20 p-5 bg-primary text-white">
+      <br>
+      <br>
+      <h2 class="header">One-liners</h2>
+      <br>
+      <p>A one-liner is a joke delivered concisely and meant to be pithy and meaningful. As a result, it is very popular with comedians, such as Groucho Marx and Henny Youngman.</p>
+      <ul>
+        <li>My girlfriend makes me want to be a better person - so I can get a better girlfriend.</li>
+        <li>Throwing acid is wrong. In some people's eyes.</li>
+        <li>Crime in multi-story car parks is wrong on so many different levels.</li>
+        <li>My wife – it's difficult to say what she does. She sells seashells on the seashore.</li>
+        <li>It takes a lot of balls to golf the way I do.</li>
+        <li>When life gives you melons, you might be dyslexic.</li>
+        <li>I know they say that money talks, but all mine says is 'Goodbye.'</li>
+        <li>My therapist says I have a preoccupation for revenge. We’ll see about that.</li>
+        <li>Two fish are in a tank. One says, 'How do you drive this thing?'</li>
+        <li>"I have nothing to declare except my genius." (Oscar Wilde, upon arriving at US customs in 1882)</li>
+      </ul>
+    </div>
+
+    <div id="Anti-jokes" class="container-fluid my-20 p-5 bg-dark text-white">
+      <br>
+      <br>
+      <h2 class="header">Anti-jokes</h2>
+      <br>
+      <p>An anti-joke is a type of humor in which the joke-teller says something that is intentionally unfunny. It usually relies on the audience's expectation of something humorous, and the irony of it not being funny is what provides the comedic value.</p>
+      <div class="alert alert-info">
+        <mark>Fun Fact:</mark> A prank form of an anti-joke, known as <a href="https://www.youtube.com/watch?v=9xduTMrUTqI" class="alert-link" target="_blank">no soap radio</a> was popularized in 1950s New York.
+      </div>
+      <p><b>The obvious punchline</b> is structured like a traditional joke, but its punchline is the most obvious to the narrative.<p>
+      <ul>
+        <li>Want to hear something that will make you smile? Your facial muscles.</li>
+        <li>What do you call a pencil sharpener that can't sharpen pencils? Broken.</li>
+        <li>What do you get when you mix and a goat and a sheep? A geep.</li>
+        <li>What did one stranger say to the other? Nothing. They didn't know each other.</li>
+        <li>What did one Frenchman say to the other? I have no idea; I don’t speak French.</li>
+        <li>How does the white-tail deer jump higher than the average house? The average house can't jump.</li>
+        <li>I can still remember my Grandpa's last words before he kicked the bucket. He said, "Hey, how far do you think I can kick this bucket?"</li>
+        <li>You know what's really odd? Numbers that aren't divisible by two.</li>
+        <li>What's yellow and is something you shouldn't drink? A school bus.</li>
+        <li>What did the cowboy say at his second rodeo? "This ain't my first rodeo!"</li>
+      </ul>
+      <p><b>The inobvious punchline</b> contains a set-up suggesting a certain (usually risqué) punchline, but whose actual ending is the opposite of what the listener was anticipating.</p>
+      <ul>
+        <li>Did you hear about the honeymooners who confused the tube of K-Y Jelly with window putty? Quite the tragedy, all the windows fell out of their new home.</li>
+      </ul>
+    </div>
+
+    <div class="container-fluid my-20 p-5 text-center bg-primary text-dark">
+      <div class="ratio ratio-1x1">
+        <iframe src="https://www.youtube.com/embed/lbicNSnF7e0"></iframe>
+      </div>
+      <br>
+      <div class="btn-group">
+        <a class="btn btn-light" href="https://sites.google.com/bishops.com/gentrification-in-san-diego/home?authuser=1" target="_blank">Check out another of my websites here!</a>
+        <a class="btn btn-light" href="https://www.jimmycomedy.com/" target="_blank">Check out my favorite comedian, Jimmy O. Yang, here!</a>
+        <a class="btn btn-light" href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">Check out more jokes here!</a>
+      </div>
+    </div>
+
+    <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+    </script>
+
+    <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    </script>
+
+  </body>
+</html>
